@@ -6,17 +6,17 @@
 /*   By: alvega-g <alvega-g@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 13:37:09 by alvega-g          #+#    #+#             */
-/*   Updated: 2024/04/11 15:56:15 by alvega-g         ###   ########.fr       */
+/*   Updated: 2024/04/11 16:37:28 by alvega-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLAPTRAP_H
-# define CLAPTRAP_H
+#ifndef CLAPTRAP_HPP
+# define CLAPTRAP_HPP
 
 #include <iostream>
 
 class ClapTrap {
-	private:
+	protected:
 		std::string name;
 		int hitPoints;
 		int energyPoints;
