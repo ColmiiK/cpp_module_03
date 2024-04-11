@@ -6,7 +6,7 @@
 /*   By: alvega-g <alvega-g@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 13:37:00 by alvega-g          #+#    #+#             */
-/*   Updated: 2024/04/11 13:58:58 by alvega-g         ###   ########.fr       */
+/*   Updated: 2024/04/11 14:13:02 by alvega-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ ClapTrap::ClapTrap( void ) {
 	name = "null";
 	hitPoints = 10;
 	energyPoints = 10;
-	attackDamage = 10;
+	attackDamage = 0;
 }
 
 ClapTrap::ClapTrap( std::string str ) {
@@ -25,7 +25,7 @@ ClapTrap::ClapTrap( std::string str ) {
 	name = str;
 	hitPoints = 10;
 	energyPoints = 10;
-	attackDamage = 10;
+	attackDamage = 0;
 }
 
 ClapTrap::ClapTrap( const ClapTrap& source ) {
