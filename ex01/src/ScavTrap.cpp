@@ -6,7 +6,7 @@
 /*   By: alvega-g <alvega-g@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 15:50:47 by alvega-g          #+#    #+#             */
-/*   Updated: 2024/04/11 17:28:38 by alvega-g         ###   ########.fr       */
+/*   Updated: 2024/04/15 16:05:39 by alvega-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ ScavTrap::ScavTrap( void ) : ClapTrap () {
 	hitPoints = 100;
 	energyPoints = 50;
 	attackDamage = 20;
+	gate_keeper_mode = false;
+	std::cout << "Constructing " << name << std::endl;
 }
 
 ScavTrap::ScavTrap( std::string str ) : ClapTrap ( str ) {
@@ -23,6 +25,8 @@ ScavTrap::ScavTrap( std::string str ) : ClapTrap ( str ) {
 	hitPoints = 100;
 	energyPoints = 50;
 	attackDamage = 20;
+	gate_keeper_mode = false;
+	std::cout << "Constructing " << name << std::endl;
 }
 
 ScavTrap::ScavTrap( const ScavTrap& source ) : ClapTrap ( source ) {
@@ -33,15 +37,15 @@ ScavTrap::ScavTrap( const ScavTrap& source ) : ClapTrap ( source ) {
 }
 
 ScavTrap::~ScavTrap( void ) {
-	
+	std::cout << "Deconstructing " << name << std::endl;
 }
 
 void ScavTrap::attack( const std::string& target ) {
 	if (hitPoints <= 0) {
-		std::cout << "ScavTrap " << name << " has no hit points left!" << std::endl;
+		std::cout << name << " has no hit points left!" << std::endl;
 	}
 	else if (energyPoints <= 0) {
-		std::cout << "ScavTrap " << name << " has no enery points left!" << std::endl;
+		std::cout << name << " has no enery points left!" << std::endl;
 	}
 	else {
 		std::cout << "ScavTrap " << name << " attacks " << target << ", causing " << attackDamage << " points of damage!" << std::endl;
@@ -50,6 +54,9 @@ void ScavTrap::attack( const std::string& target ) {
 }
 
 void ScavTrap::guardGate( void ) {
-	gate_keeper_mode = true;
-	std::cout << "ScavTrap " << name << " is now in Gate Keeper mode!" << std::endl;
+	gate_keeper_mode = !gate_keeper_mode;
+	if (gate_keeper_mode)
+		std::cout << "ScavTrap " << name << " is now in Gate Keeper mode!" << std::endl;
+	if (!gate_keeper_mode)
+		std::cout << "ScavTrap " << name << " is no longer in Gate Keeper mode!" << std::endl;
 }
