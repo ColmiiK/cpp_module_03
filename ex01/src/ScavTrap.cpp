@@ -6,18 +6,22 @@
 /*   By: alvega-g <alvega-g@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 15:50:47 by alvega-g          #+#    #+#             */
-/*   Updated: 2024/04/15 16:05:39 by alvega-g         ###   ########.fr       */
+/*   Updated: 2024/04/15 16:24:01 by alvega-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <ScavTrap.hpp>
+
+static void print_constructor(std::string name) {
+	std::cout << "Constructing ScavTrap " << name << std::endl;
+}
 
 ScavTrap::ScavTrap( void ) : ClapTrap () {
 	hitPoints = 100;
 	energyPoints = 50;
 	attackDamage = 20;
 	gate_keeper_mode = false;
-	std::cout << "Constructing " << name << std::endl;
+	print_constructor(name);
 }
 
 ScavTrap::ScavTrap( std::string str ) : ClapTrap ( str ) {
@@ -26,7 +30,7 @@ ScavTrap::ScavTrap( std::string str ) : ClapTrap ( str ) {
 	energyPoints = 50;
 	attackDamage = 20;
 	gate_keeper_mode = false;
-	std::cout << "Constructing " << name << std::endl;
+	print_constructor(name);
 }
 
 ScavTrap::ScavTrap( const ScavTrap& source ) : ClapTrap ( source ) {
