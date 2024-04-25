@@ -6,7 +6,7 @@
 /*   By: alvega-g <alvega-g@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 15:50:47 by alvega-g          #+#    #+#             */
-/*   Updated: 2024/04/15 16:24:01 by alvega-g         ###   ########.fr       */
+/*   Updated: 2024/04/25 16:56:10 by alvega-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ ScavTrap::ScavTrap( const ScavTrap& source ) : ClapTrap ( source ) {
 }
 
 ScavTrap::~ScavTrap( void ) {
-	std::cout << "Deconstructing " << name << std::endl;
+	std::cout << "Destructing ScavTrap " << name << std::endl;
 }
 
 void ScavTrap::attack( const std::string& target ) {

@@ -6,7 +6,7 @@
 /*   By: alvega-g <alvega-g@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 13:37:00 by alvega-g          #+#    #+#             */
-/*   Updated: 2024/04/15 16:22:56 by alvega-g         ###   ########.fr       */
+/*   Updated: 2024/04/25 16:55:59 by alvega-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ ClapTrap& ClapTrap::operator=( const ClapTrap& source ) {
 }
 
 ClapTrap::~ClapTrap( void ) {
-	std::cout << "Deconstructing " << name << std::endl;
+	std::cout << "Destructing ClapTrap " << name << std::endl;
 }
 
 void ClapTrap::attack( const std::string& target ) {

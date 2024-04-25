@@ -6,7 +6,7 @@
 /*   By: alvega-g <alvega-g@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 11:59:41 by alvega-g          #+#    #+#             */
-/*   Updated: 2024/04/17 12:42:50 by alvega-g         ###   ########.fr       */
+/*   Updated: 2024/04/25 16:56:05 by alvega-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,10 @@ FragTrap::FragTrap( std::string str ) : ClapTrap ( str ) {
 	energyPoints = 100;
 	attackDamage = 30;
 	print_constructor(name);
+}
+
+FragTrap::~FragTrap( void ) {
+	std::cout << "Destructing FragTrap " << name << std::endl;
 }
 
 void FragTrap::highFivesGuys( void ) {

@@ -6,7 +6,7 @@
 /*   By: alvega-g <alvega-g@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 15:51:02 by alvega-g          #+#    #+#             */
-/*   Updated: 2024/04/11 17:24:28 by alvega-g         ###   ########.fr       */
+/*   Updated: 2024/04/25 16:41:58 by alvega-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <ClapTrap.hpp>
 
-class ScavTrap : public ClapTrap {
+class ScavTrap : virtual public ClapTrap {
 	private:
 		bool gate_keeper_mode;
 	public:
