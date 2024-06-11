@@ -6,7 +6,7 @@
 /*   By: alvega-g <alvega-g@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 13:36:40 by alvega-g          #+#    #+#             */
-/*   Updated: 2024/04/15 16:02:13 by alvega-g         ###   ########.fr       */
+/*   Updated: 2024/06/11 16:32:29 by alvega-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int main()
 	{
 		std::cout << "\033[34mConstructing\033[0m" << std::endl;
 		ClapTrap a;
-		ClapTrap b("Cody");
+		ClapTrap b("Beta");
 
 		std::cout << "\033[34mTesting\033[0m" << std::endl;
 		a.attack("some other robot");
@@ -29,7 +29,7 @@ int main()
 		a.attack("some other other robot");
 		b.beRepaired(3);
 		for (int i = 0; i < 12; i++)
-			b.attack("Cody-clone");
+			b.attack("Beta-clone");
 		b.beRepaired(3);
 		std::cout << "\033[34mDeconstructing\033[0m" << std::endl;
 	}
@@ -37,7 +37,7 @@ int main()
 	{
 		std::cout << "\033[34mConstructing\033[0m" << std::endl;
 		ScavTrap c;
-		ScavTrap d("Savage");
+		ScavTrap d("Delta");
 
 		std::cout << "\033[34mTesting\033[0m" << std::endl;
 		c.attack("CloneTrap");
@@ -46,7 +46,7 @@ int main()
 		c.beRepaired(22);
 		c.guardGate();
 		c.guardGate();
-		d.attack("Savage-clone");
+		d.attack("Delta-clone");
 		d.takeDamage(101);
 		d.takeDamage(15);
 		d.attack("ScavTrap-clone");
