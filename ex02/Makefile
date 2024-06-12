@@ -55,4 +55,7 @@ fclean:
 re:			fclean all
 			@echo "$(MAGENTA)$(NAME) recompiled!$(DEF_COLOR)"
 
+run:		all
+			@./$(NAME)
+
 .PHONY: all clean fclean re

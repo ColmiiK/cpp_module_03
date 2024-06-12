@@ -6,7 +6,7 @@
 /*   By: alvega-g <alvega-g@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 12:34:08 by alvega-g          #+#    #+#             */
-/*   Updated: 2024/04/25 16:51:35 by alvega-g         ###   ########.fr       */
+/*   Updated: 2024/06/12 11:38:31 by alvega-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@
 class DiamondTrap : public FragTrap, public ScavTrap {
 	private:
 		std::string name;
-				
 	public:
 		DiamondTrap( void );
 		DiamondTrap( std::string str );

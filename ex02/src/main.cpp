@@ -6,7 +6,7 @@
 /*   By: alvega-g <alvega-g@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 13:36:40 by alvega-g          #+#    #+#             */
-/*   Updated: 2024/06/11 16:35:10 by alvega-g         ###   ########.fr       */
+/*   Updated: 2024/06/12 11:26:15 by alvega-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int main()
 	std::cout << "### TESTING CLAPTRAP ###\n" << std::endl;
 	{
 		std::cout << "\033[34mConstructing\033[0m" << std::endl;
-		ClapTrap a;
+		ClapTrap a("Alpha");
 		ClapTrap b("Beta");
 
 		std::cout << "\033[34mTesting\033[0m" << std::endl;
@@ -36,7 +36,7 @@ int main()
 	std::cout << "\n\n### TESTING SCAVTRAP ###\n" << std::endl;
 	{
 		std::cout << "\033[34mConstructing\033[0m" << std::endl;
-		ScavTrap c;
+		ScavTrap c("Kappa");
 		ScavTrap d("Delta");
 
 		std::cout << "\033[34mTesting\033[0m" << std::endl;
@@ -47,21 +47,21 @@ int main()
 		c.guardGate();
 		c.guardGate();
 		d.attack("Delta-clone");
-		d.takeDamage(101);
-		d.takeDamage(15);
+		d.takeDamage(99);
+		d.takeDamage(1);
 		d.attack("ScavTrap-clone");
 		std::cout << "\033[34mDeconstructing\033[0m" << std::endl;
 	}
 	std::cout << "\n\n### TESTING FRAGTRAP ###\n" << std::endl;
 	{
 		std::cout << "\033[34mConstructing\033[0m" << std::endl;
-		FragTrap e;
+		FragTrap e("Epsilon");
 		FragTrap g("Gamma");
 
 		std::cout << "\033[34mTesting\033[0m" << std::endl;
 		e.highFivesGuys();
 		e.attack("some random dude");
-		e.takeDamage(101);
+		e.takeDamage(99);
 		e.takeDamage(1);
 		e.attack("some random dude");
 		g.highFivesGuys();

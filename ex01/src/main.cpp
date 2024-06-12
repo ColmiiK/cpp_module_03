@@ -6,7 +6,7 @@
 /*   By: alvega-g <alvega-g@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 13:36:40 by alvega-g          #+#    #+#             */
-/*   Updated: 2024/06/11 16:32:29 by alvega-g         ###   ########.fr       */
+/*   Updated: 2024/06/12 11:17:26 by alvega-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int main()
 	std::cout << "### TESTING CLAPTRAP ###\n" << std::endl;
 	{
 		std::cout << "\033[34mConstructing\033[0m" << std::endl;
-		ClapTrap a;
+		ClapTrap a("Alpha");
 		ClapTrap b("Beta");
 
 		std::cout << "\033[34mTesting\033[0m" << std::endl;
@@ -36,7 +36,7 @@ int main()
 	std::cout << "\n\n### TESTING SCAVTRAP ###\n" << std::endl;
 	{
 		std::cout << "\033[34mConstructing\033[0m" << std::endl;
-		ScavTrap c;
+		ScavTrap c("Kappa");
 		ScavTrap d("Delta");
 
 		std::cout << "\033[34mTesting\033[0m" << std::endl;

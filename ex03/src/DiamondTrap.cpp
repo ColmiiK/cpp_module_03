@@ -6,7 +6,7 @@
 /*   By: alvega-g <alvega-g@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 12:32:46 by alvega-g          #+#    #+#             */
-/*   Updated: 2024/04/25 17:07:10 by alvega-g         ###   ########.fr       */
+/*   Updated: 2024/06/12 11:53:49 by alvega-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,19 @@
 DiamondTrap::DiamondTrap( void ) {
 	name = "Default DiamondTrap";
 	ClapTrap::name = name + "_clap_name";
-	this->FragTrap::hitPoints = FragTrap::hitPoints;
-	this->ScavTrap::energyPoints = ScavTrap::energyPoints;
-	this->FragTrap::attackDamage =  FragTrap::attackDamage;
+	hitPoints = 100;
+	energyPoints = 50;
+	attackDamage = 30;
 	std::cout << "Constructing DiamondTrap " << name << std::endl;
-	
 }
 
 DiamondTrap::DiamondTrap( std::string str ) {
+	std::cout << "FIRST ATTACKDAMAGE-> " << attackDamage << std::endl;
 	name = str;
 	ClapTrap::name = str + "_clap_name";
-	this->FragTrap::hitPoints = FragTrap::hitPoints;
-	this->ScavTrap::energyPoints = ScavTrap::energyPoints;
-	this->FragTrap::attackDamage =  FragTrap::attackDamage;
+	hitPoints = 100;
+	energyPoints = 50;
+	attackDamage = 30;
 	std::cout << "Constructing DiamondTrap " << name << std::endl;
 }
 
