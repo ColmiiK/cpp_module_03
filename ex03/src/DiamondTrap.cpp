@@ -6,15 +6,15 @@
 /*   By: alvega-g <alvega-g@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 12:32:46 by alvega-g          #+#    #+#             */
-/*   Updated: 2024/06/12 11:53:49 by alvega-g         ###   ########.fr       */
+/*   Updated: 2024/06/14 10:54:57 by alvega-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <DiamondTrap.hpp>
 
 DiamondTrap::DiamondTrap( void ) {
-	name = "Default DiamondTrap";
 	ClapTrap::name = name + "_clap_name";
+	name = "Default DiamondTrap";
 	hitPoints = 100;
 	energyPoints = 50;
 	attackDamage = 30;
@@ -22,9 +22,8 @@ DiamondTrap::DiamondTrap( void ) {
 }
 
 DiamondTrap::DiamondTrap( std::string str ) {
-	std::cout << "FIRST ATTACKDAMAGE-> " << attackDamage << std::endl;
-	name = str;
 	ClapTrap::name = str + "_clap_name";
+	name = str;
 	hitPoints = 100;
 	energyPoints = 50;
 	attackDamage = 30;
@@ -37,8 +36,8 @@ DiamondTrap::DiamondTrap( const DiamondTrap &source ) {
 }
 
 DiamondTrap& DiamondTrap::operator=( const DiamondTrap &source ) {
-	this->name = source.name;
 	ClapTrap::name = source.name + "_clap_name";
+	this->name = source.name;
 	this->hitPoints = source.hitPoints;
 	this->energyPoints = source.energyPoints;
 	this->attackDamage = source.attackDamage;

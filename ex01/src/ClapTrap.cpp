@@ -6,22 +6,18 @@
 /*   By: alvega-g <alvega-g@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 13:37:00 by alvega-g          #+#    #+#             */
-/*   Updated: 2024/06/12 11:27:37 by alvega-g         ###   ########.fr       */
+/*   Updated: 2024/06/14 11:05:23 by alvega-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <ClapTrap.hpp>
-
-static void print_constructor(std::string name) {
-	std::cout << "Constructing ClapTrap " << name << std::endl;
-}
 
 ClapTrap::ClapTrap( void ) {
 	name = "null";
 	hitPoints = 10;
 	energyPoints = 10;
 	attackDamage = 0;
-	print_constructor(name);
+	std::cout << "Constructing ClapTrap " << name << std::endl;
 }
 
 ClapTrap::ClapTrap( std::string str ) {
@@ -29,7 +25,7 @@ ClapTrap::ClapTrap( std::string str ) {
 	hitPoints = 10;
 	energyPoints = 10;
 	attackDamage = 0;
-	print_constructor(name);
+	std::cout << "Constructing ClapTrap " << name << std::endl;
 }
 
 ClapTrap::ClapTrap( const ClapTrap& source ) {
@@ -54,6 +50,7 @@ ClapTrap::~ClapTrap( void ) {
 }
 
 void ClapTrap::attack( const std::string& target ) {
+	std::cout << "ClapTrap ";
 	if (hitPoints <= 0) {
 		std::cout << name << " has no hit points left!" << std::endl;
 	}

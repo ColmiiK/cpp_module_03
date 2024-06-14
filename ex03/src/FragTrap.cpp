@@ -6,21 +6,18 @@
 /*   By: alvega-g <alvega-g@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 11:59:41 by alvega-g          #+#    #+#             */
-/*   Updated: 2024/06/12 11:27:20 by alvega-g         ###   ########.fr       */
+/*   Updated: 2024/06/14 11:07:37 by alvega-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <FragTrap.hpp>
 
-static void print_constructor(std::string name) {
-	std::cout << "Constructing FragTrap " << name << std::endl;
-}
-
 FragTrap::FragTrap( void ) {
+	name = "null";
 	hitPoints = 100;
 	energyPoints = 100;
 	attackDamage = 30;
-	print_constructor(name);
+	std::cout << "Constructing FragTrap " << name << std::endl;
 }
 
 FragTrap::FragTrap( std::string str ) : ClapTrap(str) {
@@ -28,7 +25,7 @@ FragTrap::FragTrap( std::string str ) : ClapTrap(str) {
 	hitPoints = 100;
 	energyPoints = 100;
 	attackDamage = 30;
-	print_constructor(name);
+	std::cout << "Constructing FragTrap " << name << std::endl;
 }
 
 FragTrap::FragTrap( const FragTrap& source ) {
